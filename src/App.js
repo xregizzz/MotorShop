@@ -1,8 +1,12 @@
+import { GlobalStyle } from "./styles/global";
+
 function App() {
   return (
-    <div>
+    <>
+      <GlobalStyle />
+
       <h1>Olar mundo</h1>
-    </div>
+    </>
   );
 }
 
