@@ -1,23 +1,28 @@
+import UserAdvertiser from "../UserAdvertiser";
+import { Card, BackGroundImg, DataCar, Value } from "./styled";
+
 const Cards = ({ img, title, details, user, km, year, value }) => {
   return (
-    <div>
-      <div>
-        <img src={img} alt=''/>
-      </div>
+    <Card>
+      <BackGroundImg>
+        <img src={img} alt='' draggable={false}/>
+      </BackGroundImg>
 
       <h3>{title}</h3>
       <span>{details}</span>
 
-      <div>
+      <UserAdvertiser userName={user} color='blue'/>
+
+      <DataCar>
         <div>
           <p>{km}</p>
         </div>
         <div>
           <p>{year}</p>
         </div>
-        <p>{value}</p>
-      </div>
-    </div>
+        <Value>{value}</Value>
+      </DataCar>
+    </Card>
   );
 };
 
