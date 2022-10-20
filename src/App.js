@@ -13,6 +13,7 @@ import car11 from "../src/assets/car11.png";
 import car12 from "../src/assets/car12.png";
 import ContainerCards from "./components/ContainerCard";
 import ContainerAuction from "./components/ContainerAuction";
+import Button from "./components/Button";
 
 function App() {
   const arrayCars = [
@@ -171,6 +172,13 @@ function App() {
       <ContainerAuction arrayTorender={arrayAuction} />
       <ContainerCards typeCard={"Carros"} arrayToRender={arrayCars} />
       <ContainerCards typeCard={"Motos"} arrayToRender={arrayCars} />
+      <div>
+        <h1>Teste</h1>
+        <div>
+          <Button>Teste Azul</Button>
+          <Button whiteSchema>Teste Branco</Button>
+        </div>
+      </div>
     </>
   );
 }
