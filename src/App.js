@@ -1,12 +1,11 @@
-import { GlobalStyle } from "./styles/global";
+import { VStack } from "@chakra-ui/react";
+import { Homepage } from "./pages/HomePage/index";
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-
-      <h1>Olar mundo</h1>
-    </>
+    <VStack>
+      <Homepage />
+    </VStack>
   );
 }
 
