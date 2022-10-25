@@ -1,4 +1,6 @@
-import { GlobalStyle } from "./styles/global";
+import { VStack } from "@chakra-ui/react";
+import { Homepage } from "./pages/HomePage/index";
+import {GlobalStyle} from "./styles/global"
 
 import car1 from "../src/assets/car1.png";
 import car2 from "../src/assets/car2.png";
@@ -169,6 +171,9 @@ function App() {
   return (
     <>
       <GlobalStyle />
+      <VStack>
+        <Homepage />
+      </VStack>
       <ContainerAuction arrayTorender={arrayAuction} />
       <ContainerCards typeCard={"Carros"} arrayToRender={arrayCars} />
       <ContainerCards typeCard={"Motos"} arrayToRender={arrayCars} />
