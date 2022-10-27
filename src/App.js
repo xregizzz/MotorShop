@@ -16,6 +16,7 @@ import car12 from "../src/assets/car12.png";
 import ContainerCards from "./components/ContainerCard";
 import ContainerAuction from "./components/ContainerAuction";
 import Button from "./components/Button";
+import Modal from "./components/modal";
 
 function App() {
   const arrayCars = [
@@ -174,6 +175,7 @@ function App() {
       <VStack>
         <Homepage />
       </VStack>
+      {/* <Modal arrayTorender={arrayAuction}/> */}
       <ContainerAuction arrayTorender={arrayAuction} />
       <ContainerCards typeCard={"Carros"} arrayToRender={arrayCars} />
       <ContainerCards typeCard={"Motos"} arrayToRender={arrayCars} />
