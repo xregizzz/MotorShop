@@ -1,5 +1,6 @@
-import Product from "./pages/Product";
+
 import { GlobalStyle } from "./styles/global";
+import Product from '../'
 
 function App() {
   // const arrayCars = [
@@ -155,7 +156,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Product />
+      <Product/>
+     
     </>
   );
 }
