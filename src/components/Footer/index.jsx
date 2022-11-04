@@ -21,7 +21,7 @@ export const Footer = () => {
         fontSize={"14px"}
         color={globalStyles.whiteFixed}
       >
-        © 2022 - Todos os direitos reservados.
+        © 2022 - Todos os direitos reservados .
       </Text>
       <VStack>
         <Button
