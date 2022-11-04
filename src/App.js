@@ -1,5 +1,7 @@
+
 import Product from "./pages/Product";
 import { GlobalStyle } from "./styles/global";
+
 
 function App() {
   // const arrayCars = [
