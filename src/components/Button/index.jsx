@@ -1,11 +1,15 @@
-import { Container } from "./styled";
+import { ButtonContainer } from "./styled"
 
-function Button({ children, whiteSchema = false, ...rest }) {
-  return (
-    <Container whiteSchema={whiteSchema} type="button" {...rest}>
-      {children}
-    </Container>
-  );
+const Button = ({children, className='default', isBig=false, fullWidth, type, style, ...rest})=>{
+
+
+    return(
+        <ButtonContainer style={style}  isBig={isBig} fullWidth={fullWidth} >
+            <button type={type} className={className}  {...rest}>
+            {children}
+            </button>
+        </ButtonContainer>
+    )
 }
 
-export default Button;
+export default Button

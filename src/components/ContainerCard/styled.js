@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Main = styled.section`
+  position:relative;
   max-width: 1482px;
-  margin: 100px auto 116px;
+  margin: 100px auto 0px;
 
   h5 {
     margin-top: 40px;
@@ -24,6 +25,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  gap: 48px;
 
   ::-webkit-scrollbar {
     height: 0px;
