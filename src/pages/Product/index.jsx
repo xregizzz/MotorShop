@@ -3,16 +3,36 @@ import car7 from "../../assets/car7.png";
 import Button from "../../components/Button";
 import UserAdvertiser from "../../components/UserAdvertiser";
 import { Header } from "../../components/Header";
+import { useState } from "react";
+import ModalImage from "../../components/modalImage";
+import { useNavigate } from "react-router-dom";
+
+
 const Product = () => {
+  const [imageSelected, setImageSelected] = useState("");
+
+  const [OpenModalImage, setOpenModalImage] = useState(false);
+  const openCloseModalImage = () => setOpenModalImage(!OpenModalImage);
+  const navigate = useNavigate();
+
   return (
     <>
+      {OpenModalImage && (
+        <ModalImage image={imageSelected} openClose={openCloseModalImage} />
+      )}
+
       <Header />
       <AdContainer>
         <div className="blue-bg"></div>
         <div className="container">
           <div className="left-col">
             <section className="showcase-img box">
-              <figure>
+              <figure
+                onClick={() => {
+                  openCloseModalImage();
+                  setImageSelected(car7);
+                }}
+              >
                 <img src={car7} alt="Imagem do veículo" />
               </figure>
             </section>
@@ -99,32 +119,62 @@ const Product = () => {
               <h6>Fotos</h6>
               <ul>
                 <li>
-                  <figure>
+                  <figure
+                    onClick={() => {
+                      openCloseModalImage();
+                      setImageSelected(car7);
+                    }}
+                  >
                     <img src={car7} alt="Imagem da galeria" />
                   </figure>
                 </li>
                 <li>
-                  <figure>
+                  <figure
+                    onClick={() => {
+                      openCloseModalImage();
+                      setImageSelected(car7);
+                    }}
+                  >
                     <img src={car7} alt="Imagem da galeria" />
                   </figure>
                 </li>
                 <li>
-                  <figure>
+                  <figure
+                    onClick={() => {
+                      openCloseModalImage();
+                      setImageSelected(car7);
+                    }}
+                  >
                     <img src={car7} alt="Imagem da galeria" />
                   </figure>
                 </li>
                 <li>
-                  <figure>
+                  <figure
+                    onClick={() => {
+                      openCloseModalImage();
+                      setImageSelected(car7);
+                    }}
+                  >
                     <img src={car7} alt="Imagem da galeria" />
                   </figure>
                 </li>
                 <li>
-                  <figure>
+                  <figure
+                    onClick={() => {
+                      openCloseModalImage();
+                      setImageSelected(car7);
+                    }}
+                  >
                     <img src={car7} alt="Imagem da galeria" />
                   </figure>
                 </li>
                 <li>
-                  <figure>
+                  <figure
+                    onClick={() => {
+                      openCloseModalImage();
+                      setImageSelected(car7);
+                    }}
+                  >
                     <img src={car7} alt="Imagem da galeria" />
                   </figure>
                 </li>
@@ -138,7 +188,15 @@ const Product = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's
               </p>
-              <Button>Ver todos anúncios</Button>
+              <Button
+                isBig
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  navigate("/profile-user/:name/");
+                }}
+              >
+                Ver todos anúncios
+              </Button>
             </section>
           </div>
         </div>

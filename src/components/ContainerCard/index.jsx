@@ -2,8 +2,8 @@ import Cards from "../Card";
 import { Container, Main } from "./styled";
 
 
-
 const ContainerCards = ({ typeCard, arrayToRender }) => {
+ 
   return (
     <Main>
       <h5>{typeCard}</h5>
